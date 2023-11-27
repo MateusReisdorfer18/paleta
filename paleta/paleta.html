@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="paleta.css">
+</head>
+<body>
+    <h1>Escolha uma cor!</h1>
+
+    <div id="add-cor" class="add-cor">
+        <label for="nova-cor">Adicione uma nova Cor</label>
+        <input type="text" id="nova-cor">
+        <button type="button" id="adicionar">Adicionar</button>
+    </div>
+
+    <div id="paleta" class="paleta">
+        <div data-cor="blue" class="blue"><input type="button" id="remover" value="X"></div>
+        <div data-cor="green" class="green"><input type="button" id="remover" value="X"></div>
+        <div data-cor="yellow" class="yellow"><input type="button" id="remover" value="X"></div>
+        <div data-cor="red" class="red"><input type="button" id="remover" value="X"></div>
+        <div data-cor="purple" class="purple"><input type="button" id="remover" value="X"></div>
+    </div>
+
+    <div id="div-res" class="res">
+        <div id="res">
+
+        </div>
+    </div>
+
+    <script src="paleta.js"></script>
+</body>
+</html>

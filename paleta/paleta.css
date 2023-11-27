@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body{
+    background-color: #000;    
+    font-family: 'Indie Flower', cursive;
+}
+
+h1{
+    text-align: center;
+    background-color: #fff;
+    margin: 1em auto 0;
+    padding: .5em 0;
+    width: 30%;
+    border-radius: 20px;
+    box-shadow: -3px 2px 8px #fff;
+}
+
+.add-cor{
+    background: linear-gradient(grey, white);
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3em auto 0;
+    padding: .5em 0;
+    border-radius: 15px;
+    box-shadow: -4px 3px 8px #fff;
+}
+
+.add-cor label{
+    font-size: 1.5vw;
+}
+
+.add-cor input{
+    margin: .5em 0;
+    padding-left: .5em;
+    width: 70%;
+    border-radius: 10px;
+    border: none;
+}
+
+.add-cor input:hover{
+    transition: .3s;
+    background-color: lightgray;
+    box-shadow: -2px 1px 8px #000;
+}
+
+.add-cor input:focus{
+    outline: 0;
+    background-color: lightgray;
+    box-shadow: -2px 1px 8px #000;
+}
+
+.add-cor button{
+    width: 70%;
+    border: none;
+    padding: .5em 0;
+    margin: .5em 0;
+    border-radius: 10px;
+    background-color: green; 
+    font-family: 'Indie Flower', cursive;
+}
+
+.add-cor button:hover{
+    transition: .3s;
+    scale: 105%;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: -3px 2px 8px green;
+}
+
+.paleta{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: 1em auto;
+}
+
+.paleta div{
+    width: 15%;
+    height: 50px;
+    margin: 1em;
+    border-radius: 10px;
+    position: relative;
+}
+
+.paleta div:hover{
+    scale: 110%;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.paleta div:hover > input{
+    display: block;
+}
+
+.paleta div > input{
+    display: none;
+    border: none;
+    background: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 5px;
+}
+
+.paleta div > input:hover{
+    background-color: #000;
+    color: red;
+}
+
+.res{
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.res div{
+    border: 1px solid #fff;
+    width: 15%;
+    height: 80px;
+    border-radius: 15px;
+    box-shadow: -3px 2px 8px #fff;
+}
+
+.blue{
+    background-color: blue;
+    box-shadow: -3px 2px 8px blue;
+}
+
+.green{
+    background-color: green;
+    box-shadow: -3px 2px 8px green;
+}
+
+.yellow{
+    background-color: yellow;
+    box-shadow: -3px 2px 8px yellow;
+}
+
+.red{
+    background-color: red;
+    box-shadow: -3px 2px 8px red;
+}
+
+.purple{
+    background-color: purple;
+    box-shadow: -3px 2px 8px purple;
+}
