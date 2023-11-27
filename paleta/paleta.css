@@ -96,7 +96,7 @@ h1{
 }
 
 .paleta div > input{
-    display: none;
+    display: none; 
     border: none;
     background: none;
     position: absolute;
