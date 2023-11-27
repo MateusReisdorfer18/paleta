@@ -32,7 +32,7 @@ cores.forEach((cor) => {
     mostrarCor(cor, dataCor);
 });
 
-const addCor = () => {
+const addCor = () => { 
     const inptAddValor = inptAdd.value;
 
     if (!arrCores.includes(inptAddValor)) {
