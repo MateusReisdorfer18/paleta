@@ -32,7 +32,7 @@ cores.forEach((cor) => {
     mostrarCor(cor, dataCor);
 });
 
-const addCor = () => { 
+const addCor = () => {
     const inptAddValor = inptAdd.value;
 
     if (!arrCores.includes(inptAddValor)) {
@@ -47,17 +47,14 @@ const addCor = () => {
         btnRemover.setAttribute('value', 'X');
         div.appendChild(btnRemover);
 
-        btnRemover.addEventListener('click', ()=>{
-            const parentDiv = btnRemover.closest('div');
-
-            parentDiv.remove();  
-        });
+        removerCor(btnRemover);
 
         paleta.appendChild(div);
 
         const dataCor = div.getAttribute('data-cor');
         addArray(arrCores, dataCor);
         mostrarCor(div, dataCor);
+        removerArray(btnRemover, dataCor);
 
         localStorage.setItem('Cores', JSON.stringify(arrCores));
 
@@ -66,6 +63,25 @@ const addCor = () => {
     } else {
         alert('Essa cor já existe!');
     };
+}; 
+
+const removerArray = (btn, cor) => {
+    btn.addEventListener('click', () => {
+        let index = arrCores.findIndex((item) => item === cor);
+
+        if (index !== -1){
+            arrCores.splice(index, 1)
+            console.log(arrCores);
+        };
+    });
+};
+
+const removerCor = (btn) => {
+    btn.addEventListener('click', () => {
+        const parentDiv = btn.closest('div');
+
+        parentDiv.remove();
+    });
 };
 
 btnAdd.addEventListener('click', () => {
@@ -73,10 +89,10 @@ btnAdd.addEventListener('click', () => {
     console.log(arrCores);
 });
 
-btnRemove.forEach((btn)=>{
-    btn.addEventListener('click', ()=>{
-        const parentDiv = btn.closest('div');
+btnRemove.forEach((btn) => {
+    const parentDiv = btn.closest('div');
+    const dataCor = parentDiv.getAttribute('data-cor');
 
-        parentDiv.remove();
-    });
+    removerCor(btn);
+    removerArray(btn, dataCor);
 });
